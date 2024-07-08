@@ -15,7 +15,7 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/api/items/:id": {
+        "/api/items/{id}": {
             "get": {
                 "security": [
                     {
@@ -34,6 +34,15 @@ const docTemplate = `{
                 ],
                 "summary": "Get item by id",
                 "operationId": "get-by-id-item",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "item_id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -85,6 +94,13 @@ const docTemplate = `{
                 "summary": "Update item",
                 "operationId": "update-item",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "item_id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
                     {
                         "description": "item info",
                         "name": "input",
@@ -145,6 +161,15 @@ const docTemplate = `{
                 ],
                 "summary": "Delete items",
                 "operationId": "delete-item",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "item_id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -294,7 +319,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/lists/:id": {
+        "/api/lists/{id}": {
             "get": {
                 "security": [
                     {
@@ -313,6 +338,15 @@ const docTemplate = `{
                 ],
                 "summary": "Get List By Id",
                 "operationId": "get-list-by-id",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "list_id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -364,6 +398,13 @@ const docTemplate = `{
                 "summary": "Update List",
                 "operationId": "update-list",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "list id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
                     {
                         "description": "list info",
                         "name": "input",
@@ -424,6 +465,15 @@ const docTemplate = `{
                 ],
                 "summary": "Delete List",
                 "operationId": "delete-list",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "list_id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -458,7 +508,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/lists/:id/items": {
+        "/api/lists/{id}/items": {
             "get": {
                 "security": [
                     {
@@ -477,6 +527,15 @@ const docTemplate = `{
                 ],
                 "summary": "Get all items",
                 "operationId": "get-all-items",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "list_id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -529,6 +588,13 @@ const docTemplate = `{
                 "summary": "Create todo item",
                 "operationId": "create-item",
                 "parameters": [
+                    {
+                        "type": "string",
+                        "description": "list_id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
                     {
                         "description": "item info",
                         "name": "input",

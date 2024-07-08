@@ -105,11 +105,17 @@ info:
   title: Todo-app API
   version: "1.0"
 paths:
-  /api/items/:id:
+  /api/items/{id}:
     delete:
       consumes:
       - application/json
       operationId: delete-item
+      parameters:
+      - description: item_id
+        in: path
+        name: id
+        required: true
+        type: string
       produces:
       - application/json
       responses:
@@ -143,6 +149,12 @@ paths:
       - application/json
       description: get tem by id
       operationId: get-by-id-item
+      parameters:
+      - description: item_id
+        in: path
+        name: id
+        required: true
+        type: string
       produces:
       - application/json
       responses:
@@ -176,6 +188,11 @@ paths:
       - application/json
       operationId: update-item
       parameters:
+      - description: item_id
+        in: path
+        name: id
+        required: true
+        type: string
       - description: item info
         in: body
         name: input
@@ -284,11 +301,17 @@ paths:
       summary: Create todo list
       tags:
       - lists
-  /api/lists/:id:
+  /api/lists/{id}:
     delete:
       consumes:
       - application/json
       operationId: delete-list
+      parameters:
+      - description: list_id
+        in: path
+        name: id
+        required: true
+        type: string
       produces:
       - application/json
       responses:
@@ -322,6 +345,12 @@ paths:
       - application/json
       description: get list by id
       operationId: get-list-by-id
+      parameters:
+      - description: list_id
+        in: path
+        name: id
+        required: true
+        type: string
       produces:
       - application/json
       responses:
@@ -355,6 +384,11 @@ paths:
       - application/json
       operationId: update-list
       parameters:
+      - description: list id
+        in: path
+        name: id
+        required: true
+        type: string
       - description: list info
         in: body
         name: input
@@ -389,12 +423,18 @@ paths:
       summary: Update List
       tags:
       - lists
-  /api/lists/:id/items:
+  /api/lists/{id}/items:
     get:
       consumes:
       - application/json
       description: get all items for list_id
       operationId: get-all-items
+      parameters:
+      - description: list_id
+        in: path
+        name: id
+        required: true
+        type: string
       produces:
       - application/json
       responses:
@@ -429,6 +469,11 @@ paths:
       description: create todo item
       operationId: create-item
       parameters:
+      - description: list_id
+        in: path
+        name: id
+        required: true
+        type: string
       - description: item info
         in: body
         name: input
