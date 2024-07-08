@@ -4,6 +4,7 @@ import (
 	"context"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
+	_ "github.com/redbox12/todo-app/docs"
 	"github.com/redbox12/todo-app/domain"
 	"github.com/redbox12/todo-app/pkg/handler"
 	"github.com/redbox12/todo-app/pkg/repository"
@@ -15,6 +16,18 @@ import (
 	"syscall"
 )
 
+// @title Todo-app API
+// @version 1.0
+// @description This is a API server for TodoList Application
+// @description Contact API Support: https://t.me/vanIkorolev
+
+// @host localhost:8080
+// @BasePath /
+
+// @securityDefinitions.apikey ApiKeyAuth
+// @in header
+// @name Authorization
+// @description Bearer token
 func main() {
 	logrus.SetFormatter(&logrus.JSONFormatter{})
 	if err := initConfig(); err != nil {
