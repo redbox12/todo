@@ -2,8 +2,17 @@ package repository
 
 import (
 	"github.com/jmoiron/sqlx"
-	"github.com/redbox12/todo-app/domain"
+	"github.com/redbox12/todo-app/internal/domain"
 )
+
+const (
+	usersTable      = "users"
+	todoListTable   = "todo_lists"
+	usersListTable  = "users_lists"
+	todoItemsTable  = "todo_items"
+	listsItemsTable = "lists_items"
+)
+
 
 type Authorization interface {
 	CreateUser(user domain.User) (int, error)

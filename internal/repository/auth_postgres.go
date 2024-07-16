@@ -3,9 +3,11 @@ package repository
 import (
 	"errors"
 	"fmt"
+
 	"github.com/jmoiron/sqlx"
 	"github.com/lib/pq"
-	"github.com/redbox12/todo-app/domain"
+	"github.com/redbox12/todo-app/internal/domain"
+
 )
 
 type AuthPostgres struct {

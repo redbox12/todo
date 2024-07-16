@@ -2,7 +2,7 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/redbox12/todo-app/domain"
+	"github.com/redbox12/todo-app/internal/domain"
 	"net/http"
 	"strconv"
 )

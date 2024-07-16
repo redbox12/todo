@@ -2,18 +2,20 @@ package main
 
 import (
 	"context"
-	"github.com/joho/godotenv"
-	_ "github.com/lib/pq"
-	_ "github.com/redbox12/todo-app/docs"
-	"github.com/redbox12/todo-app/domain"
-	"github.com/redbox12/todo-app/pkg/handler"
-	"github.com/redbox12/todo-app/pkg/repository"
-	"github.com/redbox12/todo-app/pkg/service"
-	"github.com/sirupsen/logrus"
-	"github.com/spf13/viper"
 	"os"
 	"os/signal"
 	"syscall"
+
+	"github.com/joho/godotenv"
+	_ "github.com/lib/pq"
+	_ "github.com/redbox12/todo-app/docs"
+	"github.com/redbox12/todo-app/internal/repository"
+	"github.com/redbox12/todo-app/internal/server"
+	"github.com/redbox12/todo-app/internal/service"
+	"github.com/redbox12/todo-app/internal/transport/rest/handler"
+	"github.com/redbox12/todo-app/pkg/database"
+	"github.com/sirupsen/logrus"
+	"github.com/spf13/viper"
 )
 
 // @title Todo-app API
@@ -38,7 +40,7 @@ func main() {
 		logrus.Fatal("Error loading .env file")
 	}
 
-	db, err := repository.NewPostgresDB(repository.Config{
+	db, err := database.NewPostgresDB(database.Config{
 		Host:     viper.GetString("db.host"),
 		Port:     viper.GetString("db.port"),
 		Username: viper.GetString("db.username"),
@@ -54,7 +56,7 @@ func main() {
 	services := service.NewService(repos)
 	handlers := handler.NewHandler(services)
 
-	srv := new(domain.Server)
+	srv := new(server.Server)
 	go func() {
 		if err := srv.Run(viper.GetString("port"), handlers.InitRoutes()); err != nil {
 			logrus.Fatalf("error occured while running http server: %s", err.Error())
