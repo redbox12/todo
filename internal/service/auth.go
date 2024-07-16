@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/pkg/errors"
-	"github.com/redbox12/todo-app/domain"
-	"github.com/redbox12/todo-app/pkg/repository"
+	"github.com/redbox12/todo-app/internal/domain"
+	"github.com/redbox12/todo-app/internal/repository"
 	"time"
 )
 

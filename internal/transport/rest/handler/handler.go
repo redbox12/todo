@@ -3,7 +3,7 @@ package handler
 import (
 	"github.com/gin-gonic/gin"
 	_ "github.com/redbox12/todo-app/docs"
-	"github.com/redbox12/todo-app/pkg/service"
+	"github.com/redbox12/todo-app/internal/service"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 )

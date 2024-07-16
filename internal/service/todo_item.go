@@ -1,8 +1,9 @@
 package service
 
 import (
-	"github.com/redbox12/todo-app/domain"
-	"github.com/redbox12/todo-app/pkg/repository"
+	"github.com/redbox12/todo-app/internal/domain"
+	"github.com/redbox12/todo-app/internal/repository"
+
 )
 
 type TodoItemService struct {

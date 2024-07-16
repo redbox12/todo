@@ -2,10 +2,12 @@ package repository
 
 import (
 	"fmt"
-	"github.com/jmoiron/sqlx"
-	"github.com/redbox12/todo-app/domain"
-	"github.com/sirupsen/logrus"
 	"strings"
+
+	"github.com/jmoiron/sqlx"
+	"github.com/redbox12/todo-app/internal/domain"
+	"github.com/sirupsen/logrus"
+	
 )
 
 type TodoListPostgres struct {
