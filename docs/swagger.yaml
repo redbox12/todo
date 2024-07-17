@@ -99,9 +99,8 @@ definitions:
 host: localhost:8080
 info:
   contact: {}
-  description: |-
-    This is a API server for TodoList Application
-    Contact API Support: https://t.me/vanIkorolev
+  description: "This is a API server for TodoList Application\nContact API Support:
+    \U0001F4AC https://t.me/vanIkorolev"
   title: Todo-app API
   version: "1.0"
 paths:

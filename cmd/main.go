@@ -21,8 +21,8 @@ import (
 // @title Todo-app API
 // @version 1.0
 // @description This is a API server for TodoList Application
-// @description Contact API Support: https://t.me/vanIkorolev
-
+// @description Contact API Support: 💬 https://t.me/vanIkorolev
+ 
 // @host localhost:8080
 // @BasePath /
 

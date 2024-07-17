@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "This is a API server for TodoList Application\nContact API Support: https://t.me/vanIkorolev",
+        "description": "This is a API server for TodoList Application\nContact API Support: 💬 https://t.me/vanIkorolev",
         "title": "Todo-app API",
         "contact": {},
         "version": "1.0"

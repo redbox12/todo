@@ -925,7 +925,7 @@ var SwaggerInfo = &swag.Spec{
 	BasePath:         "/",
 	Schemes:          []string{},
 	Title:            "Todo-app API",
-	Description:      "This is a API server for TodoList Application\nContact API Support: https://t.me/vanIkorolev",
+	Description:      "This is a API server for TodoList Application\nContact API Support: 💬 https://t.me/vanIkorolev",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
 	LeftDelim:        "{{",
