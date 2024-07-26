@@ -2,7 +2,7 @@ port: "8000"
 db:
   username: "postgres"
   password: "qwerty"
-  host: "postgres_db"
+  host: "postgres_todo"
   port: "5432"
   dbname: "postgres"
   sslmode: "disable"

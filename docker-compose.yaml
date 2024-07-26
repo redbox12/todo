@@ -8,14 +8,14 @@ services:
     ports:
       - "8080:8000"
     depends_on:
-      postgres_db:
+      postgres_todo:
         condition: service_healthy
     environment:
       - DB_PASSWORD=qwerty
     networks:
       - app
 
-  postgres_db:
+  postgres_todo:
     image: postgres:latest
     command:
       - "postgres"
