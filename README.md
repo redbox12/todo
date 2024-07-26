@@ -12,5 +12,5 @@ docker-compose up --build
 ```
 
 ## Ссылки
-Swagger: http://localhost:8080/docs/index.html
-Pgadmin: http://localhost:5050/browser/
+- Swagger: http://localhost:8080/docs/index.html
+- Pgadmin: http://localhost:5050/browser/
