@@ -15,7 +15,7 @@ services:
       - app
 
   postgres_todo:
-    image: postgres:latest
+    image: postgres:16
     command:
       - "postgres"
     environment:
